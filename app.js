@@ -28,7 +28,7 @@ function init() {
 
             $.ajax({
                 type: "POST",
-                url: "http://127.0.0.1:5000/classify_image",
+                url: `${CONFIG.BASE_URL}classify_image`,  // ✅ Use Railway server from config
                 data: JSON.stringify({ image_data: base64Image }),
                 contentType: "application/json",
                 success: function (response) {
